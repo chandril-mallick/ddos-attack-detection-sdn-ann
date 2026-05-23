@@ -1,0 +1,6 @@
+label_id,label_name
+0,Benign
+1,DDoS_SYN_Flood
+2,DDoS_TCP_Flood
+3,DDoS_UDP_Flood
+4,Mirai_Botnet

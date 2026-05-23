@@ -1,0 +1,210 @@
+{
+  "ciciot2023_to_iomt_feature_map": {
+    "IAT": "Flow_IAT_Mean",
+    "Std": "Flow_IAT_Std",
+    "Variance": "Fwd_IAT_Std",
+    "Rate": "Flow_Packets_s",
+    "Tot size": "Flow_Bytes_s",
+    "Number": "Total_Fwd_Packets",
+    "Tot sum": "Fwd_Packets_Length_Total",
+    "Min": "Fwd_IAT_Min",
+    "AVG": "Flow_IAT_Mean_Alt",
+    "Max": "Fwd_IAT_Max",
+    "Header_Length": "Packet_Length_Mean",
+    "syn_flag_number": "SYN_Flag_Count",
+    "ack_flag_number": "ACK_Flag_Count",
+    "rst_flag_number": "RST_Flag_Count",
+    "psh_flag_number": "PSH_Flag_Count",
+    "TCP": "TCP_Ratio",
+    "UDP": "UDP_Ratio",
+    "fin_flag_number": "FIN_Flag_Count",
+    "ece_flag_number": "ECE_Flag_Count",
+    "Time_To_Live": "Time_To_Live",
+    "Protocol Type": "Protocol_Type",
+    "syn_count": "SYN_Count_Raw",
+    "ack_count": "ACK_Count_Raw"
+  },
+  "ml_feature_columns": [
+    "Flow_IAT_Mean",
+    "Flow_IAT_Std",
+    "Fwd_IAT_Std",
+    "Fwd_IAT_Min",
+    "Flow_Packets_s",
+    "Flow_Bytes_s",
+    "Total_Fwd_Packets",
+    "Fwd_Packets_Length_Total",
+    "Packet_Length_Mean",
+    "SYN_Flag_Count",
+    "ACK_Flag_Count",
+    "RST_Flag_Count",
+    "PSH_Flag_Count",
+    "FIN_Flag_Count",
+    "ECE_Flag_Count",
+    "TCP_Ratio",
+    "UDP_Ratio",
+    "Time_To_Live",
+    "SYN_Count_Raw",
+    "ACK_Count_Raw",
+    "device_type_enc",
+    "healthcare_service_enc",
+    "hospital_department_enc",
+    "patient_priority_enc",
+    "traffic_behavior_enc",
+    "attack_impact_enc",
+    "authentication_status_enc",
+    "communication_pattern_enc",
+    "risk_level_enc",
+    "anomaly_score"
+  ],
+  "categorical_encodings": {
+    "device_type": {
+      "0": "ECG_Monitor",
+      "1": "EHR_Server",
+      "2": "Glucose_Monitor",
+      "3": "ICU_Monitor",
+      "4": "Pulse_Oximeter",
+      "5": "Remote_Patient_Monitor",
+      "6": "Smart_Infusion_Pump",
+      "7": "Smart_Thermometer",
+      "8": "Ventilator_System",
+      "9": "Wearable_Health_Band"
+    },
+    "healthcare_service": {
+      "0": "Cardiology",
+      "1": "Critical_Care",
+      "2": "Diabetes_Monitoring",
+      "3": "Drug_Delivery",
+      "4": "Fitness_Monitoring",
+      "5": "Health_Records",
+      "6": "Respiratory_Monitoring",
+      "7": "Respiratory_Support",
+      "8": "Telehealth",
+      "9": "Temperature_Monitoring"
+    },
+    "hospital_department": {
+      "0": "Administration",
+      "1": "Cardiology_Ward",
+      "2": "Endocrinology",
+      "3": "General_Ward",
+      "4": "ICU",
+      "5": "Outpatient",
+      "6": "Remote_Care"
+    },
+    "patient_priority": {
+      "0": "Critical",
+      "1": "High",
+      "2": "Low",
+      "3": "Medium"
+    },
+    "traffic_behavior": {
+      "0": "Malicious",
+      "1": "Normal"
+    },
+    "attack_impact": {
+      "0": "Bandwidth_Exhaustion",
+      "1": "Botnet_Takeover",
+      "2": "None",
+      "3": "Resource_Exhaustion",
+      "4": "Severe_Service_Disruption"
+    },
+    "authentication_status": {
+      "0": "Authenticated",
+      "1": "Brute_Force_Auth",
+      "2": "Certificate_Based",
+      "3": "Spoofed_Auth",
+      "4": "Token_Based",
+      "5": "Unauthenticated"
+    },
+    "communication_pattern": {
+      "0": "Burst_Periodic",
+      "1": "Command_Response",
+      "2": "Continuous",
+      "3": "Low_Frequency",
+      "4": "Periodic_10s",
+      "5": "Periodic_5s",
+      "6": "Request_Response",
+      "7": "Scheduled_Upload"
+    },
+    "risk_level": {
+      "0": "Critical",
+      "1": "High",
+      "2": "Low"
+    }
+  },
+  "device_metadata": {
+    "ECG_Monitor": {
+      "healthcare_service": "Cardiology",
+      "hospital_department": "Cardiology_Ward",
+      "patient_priority": "Critical",
+      "communication_pattern": "Periodic_5s"
+    },
+    "Glucose_Monitor": {
+      "healthcare_service": "Diabetes_Monitoring",
+      "hospital_department": "Endocrinology",
+      "patient_priority": "High",
+      "communication_pattern": "Low_Frequency"
+    },
+    "Pulse_Oximeter": {
+      "healthcare_service": "Respiratory_Monitoring",
+      "hospital_department": "General_Ward",
+      "patient_priority": "High",
+      "communication_pattern": "Periodic_10s"
+    },
+    "Smart_Infusion_Pump": {
+      "healthcare_service": "Drug_Delivery",
+      "hospital_department": "ICU",
+      "patient_priority": "Critical",
+      "communication_pattern": "Command_Response"
+    },
+    "ICU_Monitor": {
+      "healthcare_service": "Critical_Care",
+      "hospital_department": "ICU",
+      "patient_priority": "Critical",
+      "communication_pattern": "Continuous"
+    },
+    "EHR_Server": {
+      "healthcare_service": "Health_Records",
+      "hospital_department": "Administration",
+      "patient_priority": "Low",
+      "communication_pattern": "Request_Response"
+    },
+    "Wearable_Health_Band": {
+      "healthcare_service": "Fitness_Monitoring",
+      "hospital_department": "Outpatient",
+      "patient_priority": "Low",
+      "communication_pattern": "Burst_Periodic"
+    },
+    "Remote_Patient_Monitor": {
+      "healthcare_service": "Telehealth",
+      "hospital_department": "Remote_Care",
+      "patient_priority": "Medium",
+      "communication_pattern": "Scheduled_Upload"
+    },
+    "Smart_Thermometer": {
+      "healthcare_service": "Temperature_Monitoring",
+      "hospital_department": "General_Ward",
+      "patient_priority": "Medium",
+      "communication_pattern": "Low_Frequency"
+    },
+    "Ventilator_System": {
+      "healthcare_service": "Respiratory_Support",
+      "hospital_department": "ICU",
+      "patient_priority": "Critical",
+      "communication_pattern": "Continuous"
+    }
+  },
+  "attack_impact_map": {
+    "DDoS_SYN_Flood": "Severe_Service_Disruption",
+    "DDoS_UDP_Flood": "Bandwidth_Exhaustion",
+    "DDoS_TCP_Flood": "Resource_Exhaustion",
+    "Mirai_Botnet": "Botnet_Takeover",
+    "Benign": "None"
+  },
+  "risk_level_map": {
+    "DDoS_SYN_Flood": "Critical",
+    "DDoS_UDP_Flood": "High",
+    "DDoS_TCP_Flood": "High",
+    "Mirai_Botnet": "Critical",
+    "Benign": "Low"
+  }
+}
