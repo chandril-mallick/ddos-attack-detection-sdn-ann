@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Dataset-CICIoT2023%20Based-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Domain-Healthcare%20IoMT-red?style=for-the-badge" />
+
   <img src="https://img.shields.io/badge/Task-DDoS%20Detection-orange?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Python-3.9%2B-green?style=for-the-badge&logo=python" />
   <img src="https://img.shields.io/badge/License-Research%20Use-lightgrey?style=for-the-badge" />
